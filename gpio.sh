@@ -1,9 +1,8 @@
 #!/bin/bash
 #-----------------------------------------------------------------------------
 ##
-## V3 :
-## - arg1 is the number between 1 and 8 for Pin Control
-## - arg2 is the state wanted, ON or OFF
+## - $1 is the number between 1 and 8 for Pin Control
+## - $2 is the state wanted, ON or OFF
 ##
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -34,7 +33,7 @@ fi
 ## echo "Valeur : ${gpio[$pin]}"
 ## echo "State  : $state"
 
-## SETTING THE VALUE ON OR OFF
+## SETTING THE VALUE TO ON / OFF
 echo $value > /sys/class/gpio/gpio${gpio[$pin]}/value
 
 exit 0
