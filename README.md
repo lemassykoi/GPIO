@@ -25,6 +25,7 @@ for GPIO access :
 Grant adequate permissions (550 mean root and group www-data can read and execute, nobody can write) :
 
 <code>sudo chown root:www-data /home/pi/gpio.sh</code>
+
 <code>sudo chmod 550 /home/pi/gpio.sh</code>
 
 
