@@ -40,3 +40,5 @@ Insert this lines :
 Restart Apache :
 
 <code>sudo service apache2 restart</code>
+
+![alt text](https://raw.githubusercontent.com/lemassykoi/GPIO/master/index.PNG)
