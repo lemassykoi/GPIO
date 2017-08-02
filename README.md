@@ -1,5 +1,6 @@
-# common
-Some scripts for managing GPIO with sysfs
+# GPIO
+
+Some scripts for managing GPIO with sysfs (ie. with new kernel 4.9) on Raspberry Pi 2/3
 
 - init_GPIO.sh should be run at startup (by loading it in /etc/rc.local)
 - gpio.sh is the shell script which interacts with hardware GPIO
