@@ -3,7 +3,8 @@
 $active = "ON";
 $inactive = "OFF";
 $page = $_SERVER['PHP_SELF'];
-$sec = "10";									// AUTOREFRESH 10 SECONDS$gpio = array(0, 5, 6, 13, 26, 21, 25, 16, 20);	// GPIO NUMBERS 
+$sec = "10";	// AUTOREFRESH 10 SECONDS
+$gpio = array(0, 5, 6, 13, 26, 21, 25, 16, 20);	// GPIO NUMBERS 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,7 +33,7 @@ $sec = "10";									// AUTOREFRESH 10 SECONDS$gpio = array(0, 5, 6, 13, 26, 21,
 <div class="mast-head">
 <div class="container">
 <h1>GPIO Jardin</h1>
-<p>Auto Refresh : 10 secondes</p>
+<p>Auto Refresh : 10 seconds</p>
 </div>
 </div>
 </header>
@@ -87,7 +88,7 @@ echo '<button type="button" class="btn btn-danger">ERREUR</button>';
 ?>
 <div class="col-xs-3">
                 <h3>Temp.</h3>
-                <p>Température Interne :</p>
+                <p>Internal Temp. :</p>
 <?php
 $temp = shell_exec("/opt/vc/bin/vcgencmd measure_temp | cut -d= -f2 | cut -d. -f1");
 $full_temp = shell_exec("/opt/vc/bin/vcgencmd measure_temp | cut -d= -f2");
@@ -121,4 +122,3 @@ echo '<button type="button" class="' . $btn . '">' . $full_temp . '</button>';
 <script src="js/main.js"></script>
 </body>
 </html>
-
