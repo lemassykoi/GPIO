@@ -1,8 +1,10 @@
 #-----------------------------------------------------------------------------
 # Init sysfs GPIO ports Raspberry Pi 2/3
-##                              RUN AS ROOT !!!
+##                 RUN AS ROOT !!!
 #
-#               CHECK OVERLAY AT BOOT FOR PWM-2CHAN
+#       CHECK OVERLAY AT BOOT FOR PWM-2CHAN :
+# sudo nano /boot/config.txt ==> dtoverlay=pwm-2chan
+#
 # PWM0 = pin 12 = GPIO18
 # PWM1 = pin 35 = GPIO19
 #
@@ -16,15 +18,6 @@ NC='\033[0m' # No Color
 if [ "$(id -u)" != "0" ]; then
    echo -e "${RED}This script must be run as root${NC}" 1>&2
    exit 1
-fi
-
-## Check for BC (necessary for calculs of Duty Cycle for PWM)
-dpkg -l | grep "ii  bc" > /dev/null
-if [ "$(echo $?)" != "0" ]; then
-echo "NO BC, installing..."
-apt-get install -y bc
-else
-echo "BC found... Ok."
 fi
 
 ## UNEXPORT
