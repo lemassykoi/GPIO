@@ -1,5 +1,5 @@
 #-----------------------------------------------------------------------------
-# Init sysfs GPIO ports RASPI3 CAM
+# Init sysfs GPIO ports Raspberry Pi 2/3
 ##                              RUN AS ROOT !!!
 #
 #               CHECK OVERLAY AT BOOT FOR PWM-2CHAN
