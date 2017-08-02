@@ -8,22 +8,34 @@ Some scripts for managing GPIO with sysfs
 
 If you use Apache, with www-data user :
 
+
 For temperature access :
+
 <code>sudo addgroup www-data video</code>
 
+
 for GPIO access :
+
 <code>sudo addgroup www-data gpio</code>
 
+
 Grant adequate permissions (550 mean root and group www-data can read and execute, nobody can write) :
+
 <code>sudo chown root:www-data /home/pi/gpio.sh</code>
 <code>sudo chmod 550 /home/pi/gpio.sh</code>
 
+
 And allow apache to sudo on this script :
+
 <code>sudo nano /etc/sudoers.d/020_www-data-nopasswd</code>
 
+
 Insert this lines :
-<code>www-data        ALL=(ALL) NOPASSWD:GPIO<br/>
-Cmnd_Alias GPIO = /home/pi/gpio.sh</code>
+
+<code>www-data        ALL=(ALL) NOPASSWD:GPIO</code>
+<code>Cmnd_Alias GPIO = /home/pi/gpio.sh</code>
+
 
 Restart Apache :
+
 <code>sudo service apache2 restart</code>
